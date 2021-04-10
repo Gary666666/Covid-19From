@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title Page-->
+    <title>Covid-19 Immunization Screening and Consent Form</title>
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <!-- Main JS-->
+    <script src="js/signature.js"></script>
+</head>
+<body>
+    <div class="header-banner"> 
+        <img src="images/covid-19-vaccines-banner.png" style="width: 100%; ">
+        </div>
+        <h3>COVID-19 Immunization Screening and Consent Form</h3>
+        <h4>COVID-19免疫筛查和同意书</h4>
+        <hr>
+        <form method="POST" action="pdf.php">
+        <div class="content">
+            <label>Recipient Name(接种疫苗人姓名)</label><br>
+            <input class="input" type="text" name="recipient_name" placeholder="Last and First Name"><br>
+            <label>DOB(生日日期)</label><br>
+            <input class="input" type="date" name="dof" placeholder="mm/dd/yyyy"><br>
+            <label for="genderID">Current Gender ID(目前的性别编号)</label><br>
+            <select id="gender_id" name="gender_id">
+                <option value="W">Woman/Girl</option>
+                <option value="TW">Transgender Woman/Girl</option>
+                <option value="M">Man/Boy</option>
+                <option value="TM">Transgender Man/Boy</option>
+                <option value="NB">Non-Binary Person</option>
+                <option value="GNC">Gender Non-Conforming</option>
+                <option value="Q">Not Sure/Questioning</option>
+                <option value="NR">Chose not to Respond</option>
+                <option value="GNL">Gender not Listed</option>
+            </select><br>
+            <label for="sex">Sex Assigned at Birth(出生时分配的性别)</label><br>
+            <select id="sex" name="sex">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="I">Intersex</option>
+                <option value="NR">Chose not to Respond</option>
+                <option value="SNL">Sexual Orientation not Listed</option>
+                </select> <br>
+                <label for="marital_Status">Marital Status(婚姻状况)</label><br>
+                <select id="marital_Status" name="marital_Status">
+                    <option value="S">Single</option>
+                    <option value="D">Divorced</option>
+                    <option value="M">Married</option>
+                    <option value="V">Civil Union</option>
+                    <option value="U">Unknown</option>
+                    <option value="SEPARATEED">Legally Seperated</option>
+                    <option value="PARTNER">Life Partner</option>
+                    </select> <br>
+                    <label>Address(现住地址)</label><br>
+                    <input class="input" type="text" name="address" placeholder="# Street Apt City, State Zipcode"><br>
+                    <label>Phone(联系电话)</label><br>
+                    <input class="input" type="text" name="phone" placeholder="Telephone Number"><br>
+                    <label for="ethnicity">Ethnicity(种族划分)</label><br>
+                    <select id="ethnicity" name="ethnicity">
+                        <option value="DECL">Declined</option>
+                        <option value="HIS">Hispanic Origin</option>
+                        <option value="NHL">Non-Hispanic Origin</option>
+                        <option value="UNK">Unknown</option>
+                        </select> <br>
+                    <label for="race">Race(种族)</label><br>
+                    <select id="race" name="race"> 
+                        <option value="AIA">Native American or Alaskan</option>
+                        <option value="BAA">African American or Black</option>
+                        <option value="ASN">Asian</option>
+                        <option value="WHT">White</option>
+                        <option value="NHP">Native Hawaiian or Pacific Islander</option>
+                        <option value="OTH">Other or Multiracial</option>
+                        <option value="DECL">Declined</option>
+                    </select> <br>
+                    <hr>
+                    <h4>Screening Questionnaire(筛选问卷)</h4>
+                    <label>1. Are you feeling sick today (你今天生病了吗)?</label><br>
+                    <input type="radio" id="yes" name="q1" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q1" value="no" checked>
+                    <label>No</label><br>
+                    <label>2.In the last 10 days, have you had a COVID-19 test because you had symptoms and are still
+                        awaiting your test result or been told by a health care provider or health department to isolate or
+                        quarantine at home due to COVID-19 infevtion, exposure or travel?(在过去的10天里，您是否曾进行过COVID-19测试，因为您有症状并且仍在等待测试结果，或者由于COVID-19的感染，暴露，医疗保健提供者或卫生部门告知您在家中隔离或隔离或旅行？)</label><br>
+                    <input type="radio" id="yes" name="q2" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q2" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q2" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>3.Have you been treated with antibody therapy or convalescent plasma for COVID-19 in the past 90 days (3 months) (在过去90天（3个月）中，您是否接受过抗COVID-19的抗体疗法或康复期血浆治疗)?</label><br>
+                    <input type="radio" id="yes" name="q3" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q3" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q3" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>4.Have you ever had an immediate allergic reaction(e.g., hives, facial swelling, difficulty breathing, anaphylaxis) to 
+                        any vaccine, injection, or shot or to any component of the COVID-19 vaccine, or a severe allergic reation(anaphylaxis) to anything (您是否对任何疫苗，注射剂或注射剂或COVID-19疫苗的任何成分有立即的过敏反应（例如荨麻疹，面部肿胀，呼吸困难，过敏反应），或对任何事物都产生严重的过敏反应（过敏反应))?
+                    </label><br>
+                    <input type="radio" id="yes" name="q4" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q4" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q4" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>5.Have you had any vaccines in the past 14 days(2 weeks) including flu shot (在过去的14天（2周）中，您是否接种过疫苗，包括注射流感疫苗)?</label><br>
+                    <input type="radio" id="yes" name="q5" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q5" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q5" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>6.Are you pregnant or considering becoming pregnant(您是否怀孕或正在考虑怀孕)?</label><br>
+                    <input type="radio" id="yes" name="q6" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q6" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q6" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>7.Do you have cancer, leukemia, HIV/AIDS, a history of autoimmune disease or any other condition that we weakens the immune system(您是否患有癌症，白血病，HIV / AIDS，自身免疫病史或任何其他削弱免疫系统的疾病)?</label><br>
+                    <input type="radio" id="yes" name="q7" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q7" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q7" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>8.Do you take any medicaitons that effect your immune system, such as cortisone, prednisone or other steroids, anticancer drugs, or have you had any radiation treatments(您是否服用任何会影响免疫系统的药物，例如可的松，泼尼松或其他类固醇，抗癌药，或者您是否接受过任何放射治疗)?</label><br>
+                    <input type="radio" id="yes" name="q8" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q8" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q8" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>9.Do you have a bleeding disorder or are you taking a blood thinner(您是否有出血性疾病或正在服用稀释剂)?</label><br>
+                    <input type="radio" id="yes" name="q9" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q9" value="no" checked >
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q9" value="unknown" >
+                    <label>Unknown</label><br>
+                    <label>10.Have you received a previous does of the COVID-19 vaccine?</label><br>
+                    <input type="radio" id="yes" name="q10" value="yes" >
+                    <label>Yes</label>
+                    <input type="radio" id="no" name="q10" value="no" checked>
+                    <label>No</label>
+                    <input type="radio" id="unknown" name="q10" value="unknown" >
+                    <label>Unknown</label><br>
+                     
+                    <div class="signature" >
+                        <label>Recipient Signature (签名)</label>
+                        <div id="canvas">
+                            <canvas class="roundCorners" id="newSignature"
+                            style="position: relative; margin: 0; padding: 0; border: 1px solid #c4caac;"></canvas>
+                          </div>
+                          <script>signatureCapture();</script>
+                          <button type="button" onclick="signatureSave()">Save signature</button>
+                          <button type="button" onclick="signatureClear()">Clear signature</button>
+                          </br>
+                          Saved Image
+                          </br>
+                          <img id="saveSignature" alt="Saved image png"/>
+                          
+                        </div>
+                        
+                        <div >
+                
+                            <input type="hidden" id="image_base" name="image_base64"></div>
+                        <div class="Id_upload">
+                            <label>ID Upload(上传ID)</label><br>
+                            <input type="file" name="id_picture" id="id_picture">
+                            </div>
+                    </div>   
+
+            </div>
+            <div class="footer">
+            <button type="submit" name="submit">Submit</button>
+            </div>
+            </form>
+           
+    </body>
+    <!-- <script>
+        document.getElementById("image_base").setAttribute("value","1313213213");
+        </script>
+     -->
+</html>
